@@ -35,7 +35,7 @@ $purchase->setInstallment(1);
 $purchase->setCurrency(Currency::TRY);
 $purchase->setCreditCard($creditCard);
 $purchase->setTestMode(true);
-$response = (AkBank($token))->purchase($purchase);
+$response = (new AkBank($token))->purchase($purchase);
 if($response->isSuccessful()){
     // success!
 }
